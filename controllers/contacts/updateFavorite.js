@@ -9,4 +9,5 @@ const updateFavorite = async (req, res, next) => {
   }
   res.json(result);
 };
+
 module.exports = updateFavorite;

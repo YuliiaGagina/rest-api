@@ -10,4 +10,5 @@ const getAll = async (_, res) => {
     },
   });
 };
+
 module.exports = getAll;
