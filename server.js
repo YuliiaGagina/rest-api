@@ -1,3 +1,4 @@
+
 const app = require("./app");
 
 const mongoose = require("mongoose");
@@ -16,3 +17,4 @@ mongoose
     console.log(error.message);
     process.exit(1);
   });
+
