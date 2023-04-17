@@ -4,8 +4,6 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 dotenv.config();
 
-// const bcrypt = require("bcryptjs");
-
 const { SECRET_KEY } = process.env;
 
 const login = async (req, res) => {
@@ -13,11 +11,6 @@ const login = async (req, res) => {
   const user = await User.findOne({ email });
   if (!user || !user.comparePassword(password))
     throw new Unauthorized(`Email or password is wrong`);
-  //   if (!user) {
-  //     throw new Unauthorized(`user with email ${email} not found`);
-  //   }
-  //   const passCompare = bcrypt.compareSync(password, user.password);
-  //   if (!passCompare) throw new Unauthorized(`password wrong`);
 
   const payload = {
     id: user._id,
